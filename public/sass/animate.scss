@@ -1,0 +1,204 @@
+/* Animation */
+@-webkit-keyframes enter {
+	0% {left: 100%;}
+	100% {left: 0%;}
+}
+@keyframes enter {
+	0% {left: 100%;}
+	100% {left: 0%;}
+}
+
+@-webkit-keyframes exit {
+	100% {left: -100%;}
+	0% {left: 0%;}
+}
+@keyframes exit {
+	100% {left: -100%;}
+	0% {left: 0%;}
+}
+
+@keyframes pop-in {
+	100% {bottom: 10px;}
+	0% {bottom: -50px;}
+}
+
+@-webkit-keyframes pop-in {
+	100% {bottom: 10px;}
+	0% {bottom: -50px;}
+}
+
+@keyframes fade-in {
+	100% {opacity: 1;}
+	0% {opacity: 0;}
+}
+
+@-webkit-keyframes fade-in {
+	100% {opacity: 1;}
+	0% {opacity: 0;}
+}
+
+@keyframes fade-out {
+	100% {opacity: 0;}
+	0% {opacity: 1;}
+}
+
+@-webkit-keyframes fade-out {
+	100% {opacity: 0;}
+	0% {opacity: 1;}
+}
+
+@keyframes pop-out {
+	100% {bottom: -50px;}
+	0% {bottom: 10px;}
+}
+
+@-webkit-keyframes pop-out {
+	100% {bottom: -50px;}
+	0% {bottom: 10px;}
+}
+
+.animate-enter{
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
+}
+.animate-enter.animate-leave{
+	opacity: 0;
+}
+
+.pop-in{
+	-webkit-animation: pop-in 0.4s ease-in;
+    animation: pop-in 0.4s ease-in;
+}
+
+.pop-out {
+	-webkit-animation: pop-out 0.3s ease-in;
+    animation: pop-out 0.3s ease-in;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 0.9s;
+    animation: fade-in 0.9s;
+}
+
+.fade-out {
+	-webkit-animation: fade-out 0.9s;
+    animation: fade-out 0.9s;
+}
+
+
+
+// Asset animations
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 1s forwards;
+  animation: fadeInLeft 1s forwards;
+}
+
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);    
+  }
+}
+
+@keyframes fadeOutRight {
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.fadeOutRight {
+  -webkit-animation: fadeOutRight 1s forwards;
+  animation: fadeOutRight 1s forwards;
+}
+
+
+
+
+
+
+/* Page Animations */
+.animation{
+	position: relative;
+	//top: 0px; //WHYYYYYYYYY!?
+	// z-index: 99;
+	width: 100%;
+}
+.ng-enter {
+	-webkit-animation: enter 0.8s ease-out;
+	animation: enter 0.8s ease-out;
+}
+
+.ng-leave {
+	bottom: 0%;
+	position: absolute;
+	-webkit-animation: exit 0.4s;
+	animation: exit 0.4s;
+}
+
+@-webkit-keyframes enter { //Works
+	0% {top: 100%;}
+	100% {top: 0%;}
+}
+@keyframes enter {
+	0% {top: 100%;}
+	100% {top: 0%;}
+}
+
+
+@-webkit-keyframes exit {
+	100% {bottom: -100%;}
+	0% {bottom: 0%;}
+}
+@keyframes exit {
+	100% {bottom: -100%;}
+	0% {bottom: 0%;}
+}
